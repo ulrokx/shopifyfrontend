@@ -4,3 +4,5 @@ dist
 dist-ssr
 *.local
 bundle-size
+# Local Netlify folder
+.netlify

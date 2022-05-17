@@ -1,31 +1,25 @@
-import { FC } from 'react'
-import { Link, Slider, styled } from '@mui/material'
+import { FC } from "react"
+import { styled } from "@mui/material"
 
-import Header from '@/header'
+import Header from "@/header"
+import { AIAPP } from "./components/AIAPP"
 
 const App: FC = () => {
   return (
     <Root>
       <Header />
-      <div>
-        <h2>
-          How much do you like{' '}
-          <Link href='https://vitejs.dev/' target='_blank' rel='noopener noreferrer'>
-            Vite?
-          </Link>
-        </h2>
-        <Slider />
-      </div>
+      <AIAPP />
     </Root>
   )
 }
 
-const Root = styled('div')`
-  padding: 1% 2% 10vh 2%;
+const Root = styled("div")`
+  padding: 5% 2% 10vh 2%;
   width: 100%;
   min-height: 95vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
 
   & a {

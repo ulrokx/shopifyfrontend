@@ -1,10 +1,10 @@
-import { FC, useContext } from 'react'
-import DarkModeIcon from '@mui/icons-material/Brightness3'
-import LightModeIcon from '@mui/icons-material/WbSunny'
-import { styled } from '@mui/material'
-import isPropValid from '@emotion/is-prop-valid'
+import { FC, useContext } from "react"
+import DarkModeIcon from "@mui/icons-material/Brightness3"
+import LightModeIcon from "@mui/icons-material/WbSunny"
+import { styled } from "@mui/material"
+import isPropValid from "@emotion/is-prop-valid"
 
-import { ChosenTheme } from '@/providers'
+import { ChosenTheme } from "@/providers"
 
 const DarkModeToggle: FC = () => {
   const { theme, setTheme } = useContext(ChosenTheme)
@@ -13,9 +13,9 @@ const DarkModeToggle: FC = () => {
       <Checkbox
         type='checkbox'
         id='dark-mode-toggle'
-        checked={theme === 'dark'}
+        checked={theme === "dark"}
         onChange={({ target: { checked } }) => {
-          const themeToSet = checked ? 'dark' : 'light'
+          const themeToSet = checked ? "dark" : "light"
           setTheme(themeToSet)
         }}
       />
@@ -26,13 +26,13 @@ const DarkModeToggle: FC = () => {
         <SunIcon>
           <LightModeIcon color='inherit' fontSize='small' />
         </SunIcon>
-        <Ball isChecked={theme === 'dark'} />
+        <Ball isChecked={theme === "dark"} />
       </Label>
     </Root>
   )
 }
 
-const Checkbox = styled('input')`
+const Checkbox = styled("input")`
   opacity: 0;
   position: absolute;
 `
@@ -40,7 +40,7 @@ const Checkbox = styled('input')`
 interface BallProps {
   isChecked: boolean
 }
-const Ball = styled('div', {
+const Ball = styled("div", {
   shouldForwardProp: isPropValid
 })<BallProps>`
   background-color: #fff;
@@ -52,10 +52,10 @@ const Ball = styled('div', {
   width: 16px;
   transform: translateX(0px);
   transition: transform 0.2s linear;
-  ${({ isChecked }) => (isChecked ? 'transform: translateX(17px);' : '')}
+  ${({ isChecked }) => (isChecked ? "transform: translateX(17px);" : "")}
 `
 
-const Label = styled('label')`
+const Label = styled("label")`
   background-color: #111;
   border-radius: 50px;
   cursor: pointer;
@@ -69,11 +69,11 @@ const Label = styled('label')`
   transform: scale(1.5);
 `
 
-const Root = styled('div')`
+const Root = styled("div")`
   transition: background 0.2s linear;
 `
 
-const SunIcon = styled('i')`
+const SunIcon = styled("i")`
   color: #f39c12;
   & svg {
     & path {
@@ -82,7 +82,7 @@ const SunIcon = styled('i')`
     font-size: 0.6em;
   }
 `
-const MoonIcon = styled('i')`
+const MoonIcon = styled("i")`
   color: #f1c40f;
   & svg {
     & path {

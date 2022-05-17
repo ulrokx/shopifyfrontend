@@ -1,8 +1,8 @@
-import { StrictMode } from 'react'
-import ReactDOM from 'react-dom'
+import { StrictMode } from "react"
+import ReactDOM from "react-dom"
 
-import { ChosenThemeProvider, ThemeProvider } from '@/providers'
-import App from './App'
+import { ChosenThemeProvider, ThemeProvider } from "@/providers"
+import App from "./App"
 
 ReactDOM.render(
   <StrictMode>
@@ -12,5 +12,5 @@ ReactDOM.render(
       </ThemeProvider>
     </ChosenThemeProvider>
   </StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 )
